@@ -85,6 +85,7 @@
   }
   .BBcor-rosa{
     background-color: #E5E6E9;
+    
   }
   .titulo{
     position: absolute; /* Posiciona o título absolutamente em relação ao container */
@@ -99,7 +100,7 @@
   .con{
     margin-top: 2%;
     background-color: #F3F4F5;
-    height: 90%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,4 +134,5 @@
     background-color: #F84C4C; /* Cor mais escura */
     border-color: #F82C2C; /* Borda mais escura */
   }
+ 
   

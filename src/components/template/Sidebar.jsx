@@ -13,12 +13,33 @@ function Sidebar() {
                         <ul className="nav flex-column">
                             <li className="mb-1">
                                 <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                                    Aluno
+                                    Clientes
                                 </button>
                                 <div className="collapse" id="dashboard-collapse">
                                     <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li className="nav-item"><Link to="/cadastrar-cliente" className="nav-link  d-inline-flex text-decoration-none rounded">Cadastrar Cliente</Link></li>
-                                        <li className="nav-item"><Link to="/listar-cliente" className="nav-link  d-inline-flex text-decoration-none rounded"><i class="bi bi-pencil-square"></i> listar</Link></li>
+                                        <li className="nav-item"><Link to="/cadastrar-cliente" className="nav-link  d-inline-flex text-decoration-none rounded">Cadastrar cliente</Link></li>
+                                        <li className="nav-item"><Link to="/listar-cliente" className="nav-link  d-inline-flex text-decoration-none rounded">Listar cliente</Link></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <hr className="my-3" />
+                        <ul className="nav flex-column mb-auto">
+                        </ul>
+                    </div>
+                    
+
+                    <div className="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+                        <ul className="nav flex-column">
+                            <li className="mb-1">
+                                <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                                    Contrato
+                                </button>
+                                <div className="collapse" id="dashboard-collapse">
+                                    <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li className="nav-item"><Link to="/cadastrar-contrato" className="nav-link  d-inline-flex text-decoration-none rounded">Cadastro contrato</Link></li>
+                                        <li className="nav-item"><Link to="/listar-contrato" className="nav-link  d-inline-flex text-decoration-none rounded">listar contrato</Link></li>
                                     </ul>
                                 </div>
                             </li>
@@ -35,6 +56,8 @@ function Sidebar() {
                             </li>
                         </ul>
                     </div>
+
+
                 </div>
             </div>
         </>

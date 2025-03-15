@@ -148,7 +148,7 @@ console.log(nomes2[i].nome);
                     <form onSubmit={cadastrarCliente} className="row g-3">
                     <h4>Cadastrar Cliente</h4>
                     <h5>Dados pessoais</h5>
-                        <div className="col-md-4">
+                        <div className="col-md-5">
                             <label htmlFor="nome" className="form-label">Nome:</label>
                             <input value={nome} onChange={(e) => setNome(e.target.value)} type="text" className="form-control" id="nome" name="nome" />
                         </div>
@@ -181,7 +181,7 @@ console.log(nomes2[i].nome);
                             <label htmlFor="cpf" className="form-label">CPF:</label>
                             <input value={cpf} onChange={(e) => setCpf(e.target.value)} type="text" className="form-control" id="cpf" name="cpf" placeholder="" />
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-6">
                             <label htmlFor="email" className="form-label">Email:</label>
                             <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" className="form-control" id="email" name="email" />
                         </div>
@@ -198,7 +198,7 @@ console.log(nomes2[i].nome);
                             <label htmlFor="complemento" className="form-label">Complemento:</label>
                             <input value={complemento} onChange={(e) => setComplemento(e.target.value)} type="text" className="form-control" id="complemento" name="complemento" />
                         </div>
-                        <div className="col-md-1">
+                        <div className="col-md-3">
                             <label htmlFor="cidade" className="form-label">Cidade:</label>
                             <input value={cidade} onChange={(e) => setCidade(e.target.value)} type="text" className="form-control" id="cidade" name="cidade" />
                         </div>
@@ -206,7 +206,6 @@ console.log(nomes2[i].nome);
                             <label htmlFor="uf" className="form-label">Uf:</label>
                             <input value={uf} onChange={(e) => setUf(e.target.value)} type="text" className="form-control" id="uf" name="uf" />
                         </div>
-                        <br></br>
                         <div className="col-md-10">
                             <label htmlFor="uf" className="form-label">Observação:</label>
                             <input value={observacao} onChange={(e) => setUf(e.target.value)} type="text" className="form-control" id="observacao" name="observacao" />
