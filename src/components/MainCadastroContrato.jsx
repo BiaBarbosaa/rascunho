@@ -56,7 +56,7 @@ function MainCadastroContrato() {
                     <div className="con2">
 
                     <form onSubmit={cadastrarContrato} className="row g-3">
-                    <h4>Cadastro de cliente</h4>
+                    <h4>Cadastro de contrato</h4>
 
                         <div className="col-md-5">
                             <label htmlFor="nome" className="form-label">Código do cliente:</label>
@@ -66,8 +66,10 @@ function MainCadastroContrato() {
                             <label htmlFor="inputPassword4" className="form-label">Nome completo:</label>
                             <input value={nome} onChange={(e) => setNome(e.target.value)} type="text" className="form-control" id="nome" name="nome" />
                         </div>
+                        <div className="areas">
+                            <div className="servicos">
                         <h5>Serviços adicionais</h5>
-                        <div className="col-1">
+                        <div className="col-4">
                             <label htmlFor="servicos" className="form-label">Serviços:</label>
                             <select
                                 value={servicos}
@@ -79,9 +81,12 @@ function MainCadastroContrato() {
                                 <option value="F">F</option>
                                 <option value="M">M</option>
                             </select>
+                         
                         </div>
-                        <h5>planos</h5>
-                        <div className="col-1">
+                        </div>
+                        <div className="planos">
+                        <h5>Tipos de planos</h5>
+                        <div className="col-4">
                             <label htmlFor="planos" className="form-label">Planos:</label>
                             <select
                                 value={planos}
@@ -94,9 +99,11 @@ function MainCadastroContrato() {
                                 <option value="M">M</option>
                             </select>
                         </div>
-                        <h5>pagamento</h5>
-                        <div className="col-1">
-                            <label htmlFor="pagamento" className="form-label">Forma de pagamento::</label>
+                        </div>
+                        <div className="pagamento">
+                        <h5>Pagamento</h5>
+                        <div className="col-4">
+                            <label htmlFor="pagamento" className="form-label">Forma de pagamento:</label>
                             <select
                                 value={pagamento}
                                 onChange={(e) => setPagamento(e.target.value)}
@@ -108,10 +115,12 @@ function MainCadastroContrato() {
                                 <option value="M">M</option>
                             </select>
                         </div>
+                        </div>
+                        </div>
                         
                         <div className="col-12">
                             <button type="submit" className="btn btn-primary botao-cadastrar">
-                                <i className="bi bi-box-arrow-up "></i> Cadastrar cliente</button>
+                                <i className="bi bi-box-arrow-up "></i> Cadastrar contrato</button>
                         </div>
                     </form>
                     </div>

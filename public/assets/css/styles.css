@@ -111,6 +111,8 @@
   .botao-cadastrar{
     background-color: #F98E8E;
     border: 1px solid #F84C4C;
+    transition: background-color 0.3s, border-color 0.3s; 
+
   }
   input.form-control:focus {
     outline: none;
@@ -131,8 +133,45 @@
     /*background-color: rgb(255, 0, 144);*/
   }
   .botao-cadastrar:hover {
-    background-color: #F84C4C; /* Cor mais escura */
-    border-color: #F82C2C; /* Borda mais escura */
+    background-color: #F84C4C; 
+    border-color: #F82C2C; 
   }
- 
+  .botao-cadastrar:active {
+    background-color: #F74C4C !important; 
+    border-color: #F70000 !important; 
+  }
+
+
   
+ /*MAIN CADASTRO CONTRATO*/
+ .areas{
+  /* background-color: #712cf9; */
+  display: flex; 
+  justify-content: space-between; 
+ }
+ .servicos{
+  /* background-color: #F98E8E; */
+  width: 40%;
+ }
+ .planos{
+  /* background-color: chartreuse; */
+  width: 40%;
+
+ }
+ .pagamento{
+  /* background-color: aqua; */
+  width: 40%;
+
+ }
+ .form-label {
+  display: inline;
+  white-space: nowrap;
+}
+
+
+/*MAIS LISTAR CLIENTE*/
+.table th {
+
+  background-color: #fd5151 !important; /* Caso queira garantir a cor nos <th> */
+}
+
