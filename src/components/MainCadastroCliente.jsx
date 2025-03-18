@@ -113,26 +113,25 @@ console.log(nomes2[i].nome);
 
     // Chamada a dados externos via API de forma assíncrona }
     async function chamarCep(event) {
-
         if (event.length === 8) {
             try {
-
-                //await = espero o link retornar algo
-                let resposta = await fetch(`https://viacep.com.br/ws/${event}/json/ `);
+                let resposta = await fetch(`https://viacep.com.br/ws/${event}/json/`);
                 let dadosRecebidos = await resposta.json();
-                console.log(dadosRecebidos.logradouro);
+                
+                // Verifique se a resposta da API contém as informações
+                console.log(dadosRecebidos);
+    
+                // Ajustando para pegar o nome correto da cidade
                 setComplemento(dadosRecebidos.complemento);
                 setLogradouro(dadosRecebidos.logradouro);
-                setCidade(dadosRecebidos.cidade);
+                setCidade(dadosRecebidos.localidade); // Alterado para 'localidade'
                 setUf(dadosRecebidos.uf);
             } catch (erro) {
-                console.log(`Erro em buscar o cep: ${erro}`);
+                console.log(`Erro ao buscar o CEP: ${erro}`);
             }
-
         } else {
-            alert('CEP com numero de caracteres inválidos');
+            alert('CEP com número de caracteres inválidos');
         }
-
     }
 
     return (
@@ -146,7 +145,7 @@ console.log(nomes2[i].nome);
                     <div className="con2">
                    
                     <form onSubmit={cadastrarCliente} className="row g-3">
-                    <h4>Cadastrar Cliente</h4>
+                    <h4>Cadastro de clientes</h4>
                     <h5>Dados pessoais</h5>
                         <div className="col-md-5">
                             <label htmlFor="nome" className="form-label">Nome:</label>
@@ -208,7 +207,7 @@ console.log(nomes2[i].nome);
                         </div>
                         <div className="col-md-10">
                             <label htmlFor="uf" className="form-label">Observação:</label>
-                            <input value={observacao} onChange={(e) => setUf(e.target.value)} type="text" className="form-control" id="observacao" name="observacao" />
+                            <input value={observacao} onChange={(e) => setObservacao(e.target.value)} type="text" className="form-control" id="observacao" name="observacao" />
                         </div>
                         <div className="col-12">
                             <button type="submit" className="btn btn-primary botao-cadastrar">
