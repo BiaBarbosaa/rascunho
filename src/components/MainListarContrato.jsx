@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function MainListarContrato() {
 
-    let clientes = [
+    let contratos = [
         { id: '1', nome: 'Robson' },
         { id: '2', nome: 'Galileu' },
         { id: '3', nome: 'Elliot' }
@@ -36,13 +36,13 @@ function MainListarContrato() {
                     <tbody>
                         {
                             contratos.map((contrato) => (
-                                <tr key={cliente.id}>
-                                    <td>{cliente.codigo}</td>
-                                    <td>{cliente.nome}</td>
-                                    <td>{cliente.telefone}</td>
-                                    <td>{cliente.email}</td>
-                                    <td>{cliente.cpf}</td>
-                                    <td>{cliente.opcoes}</td>
+                                <tr key={contrato.id}>
+                                    <td>{contrato.codigo}</td>
+                                    <td>{contrato.nome}</td>
+                                    <td>{contrato.telefone}</td>
+                                    <td>{contrato.email}</td>
+                                    <td>{contrato.cpf}</td>
+                                    <td>{contrato.opcoes}</td>
                                     <td>
                                         <i onClick={() => excluirContrato(contrato.id)} className="bi bi-trash"></i>
                                         <Link to={`/editar-contrato/${contrato.id}`}><i className="bi bi-pencil-square"></i></Link>

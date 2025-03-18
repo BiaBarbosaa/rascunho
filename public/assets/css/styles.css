@@ -169,9 +169,13 @@
 }
 
 
-/*MAIS LISTAR CLIENTE*/
+/*MAIS LISTAR CLIENTE G*/
 .table th {
 
   background-color: #fd5151 !important; /* Caso queira garantir a cor nos <th> */
 }
+
+ .Listar Contrato {
+  align-content: center;
+ }
 
